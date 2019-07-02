@@ -1,5 +1,5 @@
-const gulp = require('gulp')
-const nunjucks = require('gulp-nunjucks-render')
+const gulp = require('gulp');
+const nunjucks = require('gulp-nunjucks-render');
 
 module.exports = function () {
     return gulp.src('../src/*.html')
@@ -13,5 +13,5 @@ module.exports = function () {
               process.exit(1)
             }
         })
-        .pipe(gulp.dest('../public'))
+        .pipe(gulp.dest('../public'));
 };

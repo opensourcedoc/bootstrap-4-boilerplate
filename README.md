@@ -19,10 +19,6 @@ Libraries used in the output:
 
 Pending.
 
-## Todo
-
-* Fix browserSync issue.
-
 ## Copyright
 
 Copyright 2019 Michael Chen under [MIT license](http://opensource.org/licenses/MIT).

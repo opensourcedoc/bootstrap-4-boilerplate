@@ -10,24 +10,19 @@ gulp.task('html:clean', require('./tasks/html/clean'));
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 
-function sync (done) {
-  browserSync.init({
-    open: false,
-    server: { baseDir: '../public' }
-  });
-  done();
-}
-
 function reload (done) {
   browserSync.reload();
   done();
 }
 
-function watchFiles () {
-  gulp.watch('src/**/*.html', gulp.series('html', reload))
-    .on('error', message.error('WATCH: Views'));
-}
+gulp.task('watch', function () {
+  browserSync.init({
+    open: false,
+    server: { baseDir: '../public' }
+  });
 
-gulp.task('watch', gulp.parallel(sync, watchFiles));
+  gulp.watch('../src/**/*.html', gulp.series('html', reload))
+    .on('error', message.error('WATCH: Views'));
+});
 
 gulp.task('default', gulp.parallel('html'));

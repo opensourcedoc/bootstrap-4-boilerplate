@@ -5,11 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="">
+
         <title>{% block title %}{% endblock %}</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
-        <div id="app">
-            {% block content %}{% endblock %}
+        <div class="container">
+            <div id="app">
+                {% block content %}{% endblock %}
+            </div>
         </div>
+
+        <!-- Bootstrap.Native, V4 version -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.26/bootstrap-native-v4.min.js" integrity="sha256-GlvYPu8qg3GLj5W5pC8VbjXiw+HhzSyVaWYV27ibTJY=" crossorigin="anonymous"></script>
     </body>
 </html>

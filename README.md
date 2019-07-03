@@ -2,9 +2,12 @@
 
 A boilerplate project for frond end applications.
 
-## Stacks.
+## Technology Stacks
 
-Pending.
+* [Gulp 4](https://gulpjs.com/)
+* [Bootstrap.Native](http://thednp.github.io/bootstrap.native/)
+* [Polyfill.io](https://polyfill.io/v3/)
+* [HTML5 Shiv](https://github.com/aFarkas/html5shiv/)
 
 ## Usage
 

@@ -15,7 +15,13 @@
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-notify": "^3.2.0",
-    "gulp-nunjucks-render": "^2.2.3"
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-stylelint": "^9.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0"
   }
 }

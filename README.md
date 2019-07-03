@@ -8,6 +8,8 @@ Main tools used during development:
 
 * [Gulp 4](https://gulpjs.com/)
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
+* [Sass](https://sass-lang.com/)
+* [stylelint](https://stylelint.io/)
 
 Libraries used in the output:
 

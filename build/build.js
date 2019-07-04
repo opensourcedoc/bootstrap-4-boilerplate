@@ -17,10 +17,15 @@ gulp.task('javascript:build', require('./tasks/javascript/build'));
 gulp.task('javascript:clean', require('./tasks/javascript/clean'));
 gulp.task('javascript:lint', require('./tasks/javascript/lint'));
 
+/* Font Tasks */
+gulp.task('font:build', require('./tasks/font/build'));
+gulp.task('font:clean', require('./tasks/font/clean'));
+
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 gulp.task('sass', gulp.series('sass:clean', 'sass:lint', 'sass:build'));
 gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'javascript:build'));
+gulp.task('font', gulp.series('font:clean', 'font:build'));
 
 function reload (done) {
   browserSync.reload();
@@ -41,6 +46,9 @@ gulp.task('watch', function () {
 
   gulp.watch('../assets/js/**/*.js', gulp.series('javascript', reload))
     .on('error', message.error('WATCH: JavaScript'));
+
+  gulp.watch('../assets/font/**/*', gulp.series('font', reload))
+    .on('error', message.error('WATCH: Font'));
 });
 
-gulp.task('default', gulp.parallel('html', 'sass', 'javascript'));
+gulp.task('default', gulp.parallel('html', 'sass', 'javascript', 'font'));

@@ -6,16 +6,19 @@
   "scripts": {
     "dev": "npm run development",
     "development": "gulp --gulpfile=build/build.js",
-    "watch": "npm run development && gulp watch --gulpfile=build/build.js"
+    "watch": "npm run development && gulp watch --gulpfile=build/build.js",
+    "flow": "flow"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
+    "flow-bin": "^0.102.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",

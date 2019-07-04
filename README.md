@@ -11,6 +11,7 @@ Main tools used during development:
 * [Sass](https://sass-lang.com/)
 * [stylelint](https://stylelint.io/)
 * [Babel](https://babeljs.io/)
+* [Flow](https://flow.org/en/)
 * [ESLint](https://eslint.org/)
 
 Libraries used in the output:

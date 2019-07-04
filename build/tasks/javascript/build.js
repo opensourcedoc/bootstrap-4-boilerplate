@@ -4,7 +4,7 @@ const babel = require('gulp-babel');
 const message = require('../../lib/message');
 
 module.exports = function () {
-    return gulp.src('../asset/js/**/*.js')
+    return gulp.src('../assets/js/**/*.js')
         .pipe(babel({
             presets: ['@babel/preset-env']
         }))

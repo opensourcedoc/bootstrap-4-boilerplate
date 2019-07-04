@@ -6,7 +6,7 @@ const prefix = require('gulp-autoprefixer');
 const message = require('../../lib/message');
 
 module.exports = function () {
-    return gulp.src('../asset/sass/**/*.scss')
+    return gulp.src('../assets/sass/**/*.scss')
         .pipe(sassGlob())
         .pipe(sass())
         .on('error', message.error('SASS: Compilation'))

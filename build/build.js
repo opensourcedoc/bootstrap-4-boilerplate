@@ -36,10 +36,10 @@ gulp.task('watch', function () {
   gulp.watch('../src/**/*.html', gulp.series('html', reload))
     .on('error', message.error('WATCH: Views'));
 
-  gulp.watch('../asset/sass/**/*.scss', gulp.series('sass', reload))
+  gulp.watch('../assets/sass/**/*.scss', gulp.series('sass', reload))
     .on('error', message.error('WATCH: Sass'));
 
-  gulp.watch('../asset/js/**/*.js', gulp.series('javascript', reload))
+  gulp.watch('../assets/js/**/*.js', gulp.series('javascript', reload))
     .on('error', message.error('WATCH: JavaScript'));
 });
 

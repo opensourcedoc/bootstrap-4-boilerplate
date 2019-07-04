@@ -1,5 +1,10 @@
+const isdev = require('isdev');
+
 const gulp = require('gulp');
+const gulpif = require('gulp-if');
+
 const nunjucks = require('gulp-nunjucks-render');
+const htmlmin = require('gulp-htmlmin');
 
 module.exports = function () {
     return gulp.src('../src/*.html')
@@ -13,5 +18,6 @@ module.exports = function () {
               process.exit(1)
             }
         })
+        .pipe(gulpif(!isdev, htmlmin({ collapseWhitespace: true })))
         .pipe(gulp.dest('../public'));
 };

@@ -39,5 +39,8 @@
     "isdev": "^1.0.1",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
   }
 }

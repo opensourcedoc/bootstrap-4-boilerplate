@@ -21,11 +21,16 @@ gulp.task('javascript:lint', require('./tasks/javascript/lint'));
 gulp.task('font:build', require('./tasks/font/build'));
 gulp.task('font:clean', require('./tasks/font/clean'));
 
+/* Image Tasks */
+gulp.task('image:build', require('./tasks/image/build'));
+gulp.task('image:clean', require('./tasks/image/clean'));
+
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 gulp.task('sass', gulp.series('sass:clean', 'sass:lint', 'sass:build'));
 gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'javascript:build'));
 gulp.task('font', gulp.series('font:clean', 'font:build'));
+gulp.task('image', gulp.series('image:clean', 'image:build'));
 
 function reload (done) {
   browserSync.reload();
@@ -49,6 +54,9 @@ gulp.task('watch', function () {
 
   gulp.watch('../assets/font/**/*', gulp.series('font', reload))
     .on('error', message.error('WATCH: Font'));
+
+  gulp.watch('../assets/img/**/*.{jpg,jpeg,png,gif,svg}', gulp.series('image', reload))
+    .on('error', message.error('WATCH: Image'));
 });
 
-gulp.task('default', gulp.parallel('html', 'sass', 'javascript', 'font'));
+gulp.task('default', gulp.parallel('html', 'sass', 'javascript', 'font', 'image'));

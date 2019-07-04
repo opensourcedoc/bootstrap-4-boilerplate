@@ -10,6 +10,8 @@ Main tools used during development:
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
 * [Sass](https://sass-lang.com/)
 * [stylelint](https://stylelint.io/)
+* [Babel](https://babeljs.io/)
+* [ESLint](https://eslint.org/)
 
 Libraries used in the output:
 

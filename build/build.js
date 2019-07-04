@@ -12,9 +12,15 @@ gulp.task('sass:build', require('./tasks/sass/build'));
 gulp.task('sass:clean', require('./tasks/sass/clean'));
 gulp.task('sass:lint', require('./tasks/sass/lint'));
 
+/* JavaScript Tasks */
+gulp.task('javascript:build', require('./tasks/javascript/build'));
+gulp.task('javascript:clean', require('./tasks/javascript/clean'));
+gulp.task('javascript:lint', require('./tasks/javascript/lint'));
+
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 gulp.task('sass', gulp.series('sass:clean', 'sass:lint', 'sass:build'));
+gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'javascript:build'));
 
 function reload (done) {
   browserSync.reload();
@@ -32,6 +38,9 @@ gulp.task('watch', function () {
 
   gulp.watch('../asset/sass/**/*.scss', gulp.series('sass', reload))
     .on('error', message.error('WATCH: Sass'));
+
+  gulp.watch('../asset/js/**/*.js', gulp.series('javascript', reload))
+    .on('error', message.error('WATCH: JavaScript'));
 });
 
-gulp.task('default', gulp.parallel('html', 'sass'));
+gulp.task('default', gulp.parallel('html', 'sass', 'javascript'));

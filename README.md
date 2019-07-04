@@ -71,6 +71,12 @@ The output will be in *public* directory. During production phase, all assets wi
 
 Upload the content in *public* directory to a remote web server to publish this project.
 
+## See Also
+
+This boilerplate project is largely inspired by [tonik/html-frontend-boilerplate](https://github.com/tonik/html-frontend-boilerplate).
+
+Why re-inventing the wheel? That project didn't migrate to Gulp 4 yet as this repo was built. In addition, the project used [Rollup](https://rollupjs.org/guide/en/) as its bundler, which doesn't support multiple JavaScript files when combined with Gulp. Hence, I updated to Gulp 4, dropping Rollup to support multiple scripts in this repo.
+
 ## Copyright
 
 Copyright 2019 Michael Chen under [MIT license](http://opensource.org/licenses/MIT).

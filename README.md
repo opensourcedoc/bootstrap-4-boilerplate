@@ -1,6 +1,6 @@
 # HTML Front End Boilerplate
 
-Yet another boilerplate project for frond end applications.
+Yet another boilerplate project for front end applications.
 
 ## Technology Stacks
 

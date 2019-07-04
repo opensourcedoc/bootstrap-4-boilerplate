@@ -11,14 +11,20 @@ Home
 
 <p>Morbi mollis elit ex, imperdiet consequat velit fermentum quis. Nulla egestas tellus leo, vitae sagittis dui tincidunt at. Suspendisse potenti. Suspendisse erat augue, pulvinar sit amet odio vel, mollis semper eros. Duis tincidunt neque id nibh fringilla, in tristique orci ultricies. Aenean aliquet mollis luctus. Integer egestas consequat metus eu dignissim. Nam lacinia feugiat lorem, quis vulputate arcu suscipit eu. Vestibulum rhoncus non purus vel porttitor. Donec porta at quam in eleifend.</p>
 
-<pre>
-<code>
-public class HelloWorld {
+<div>Common Node.js web frameworks:</div>
+
+<ul class="list-group" style="margin: 8pt 0pt;">
+    {% for framework in data.frameworks %}
+    <li class="list-group-item">{{ framework }}</li>
+    {% endfor %}
+</ul>
+
+<div>Hello World in Java:</div>
+<pre style="margin: 5pt 0pt;"><code>public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello! World!");
     }
 }
-</code>
-</pre>
+</code></pre>
 
 {% endblock %}

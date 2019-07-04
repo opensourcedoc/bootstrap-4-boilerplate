@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
-    "development": "gulp --gulpfile=build/build.js",
+    "development": "cross-env NODE_ENV=development gulp --gulpfile=build/build.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production gulp --gulpfile=build/build.js",
     "watch": "npm run development && gulp watch --gulpfile=build/build.js",
     "flow": "flow"
   },
@@ -17,17 +19,22 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "browser-sync": "^2.26.7",
+    "cross-env": "^5.2.0",
     "del": "^4.1.1",
     "flow-bin": "^0.102.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-eslint": "^6.0.0",
+    "gulp-if": "^2.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.1.0",
     "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
+    "isdev": "^1.0.1",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
   }

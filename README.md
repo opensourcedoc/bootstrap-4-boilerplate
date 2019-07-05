@@ -6,9 +6,10 @@ Yet another boilerplate project for front end applications.
 
 Main tools used during development:
 
-* [Gulp 4](https://gulpjs.com/)
+* [Gulp](https://gulpjs.com/)
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
 * [Sass](https://sass-lang.com/)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [stylelint](https://stylelint.io/)
 * [Babel](https://babeljs.io/)
 * [Flow](https://flow.org/en/)

@@ -40,7 +40,10 @@ function reload (done) {
 gulp.task('watch', function () {
   browserSync.init({
     open: false,
-    server: { baseDir: '../public' }
+    server: {
+      baseDir: '../public',
+      index: 'index.html'
+    }
   });
 
   gulp.watch('../src/**/*.html', gulp.series('html', reload))

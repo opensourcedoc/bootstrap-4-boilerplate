@@ -13,7 +13,7 @@ const htmlmin = require('gulp-htmlmin');
 const json = require('../../lib/json');
 
 module.exports = function () {
-    return gulp.src('../src/*.html')
+    return gulp.src('../src/**/*.html')
         .pipe(data(json('../data/json/')))
         .pipe(nunjucks({
             path: ['../src']

@@ -80,4 +80,4 @@ Why re-inventing the wheel? That project didn't migrate to Gulp 4 yet as this re
 
 ## Copyright
 
-Copyright 2019 Michael Chen under [MIT license](http://opensource.org/licenses/MIT).
+Copyright 2019, Michael Chen. This repo itself is under [MIT license](http://opensource.org/licenses/MIT). Nevertheless, you may adopt it in your own project with any license you prefer.

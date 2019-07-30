@@ -43,7 +43,10 @@ function reload(done) {
 gulp.task('watch', function () {
   browserSync.init({
     open: false,
-    server: { baseDir: '../public' },
+    server: {
+      baseDir: '../public',
+      index: 'index.html'
+    },
     callbacks: {
       ready: function (err, bs) {
         bs.addMiddleware("*", function (req, res, next) {

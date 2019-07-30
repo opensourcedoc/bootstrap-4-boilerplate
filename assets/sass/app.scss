@@ -1,13 +1,17 @@
+$sansSerif: Arial, Helvetica, sans-serif;
+$serif: "Times New Roman", Times, serif;
+$monospace: Consolas, "Lucida Console", Monaco, monospace;
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $sansSerif;
 }
 
 p, div {
-    font-family: "Times New Roman", Times, serif;
+    font-family: $serif;
 }
 
 pre, code {
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
+    font-family: $monospace;
 }
 
 .container {

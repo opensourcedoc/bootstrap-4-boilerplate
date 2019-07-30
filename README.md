@@ -6,9 +6,10 @@ Yet another boilerplate project for front end applications.
 
 Main tools used during development:
 
-* [Gulp 4](https://gulpjs.com/)
+* [Gulp](https://gulpjs.com/)
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
 * [Sass](https://sass-lang.com/)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [stylelint](https://stylelint.io/)
 * [Babel](https://babeljs.io/)
 * [Flow](https://flow.org/en/)
@@ -85,4 +86,4 @@ Why re-inventing the wheel? That project didn't migrate to Gulp 4 yet as this re
 
 ## Copyright
 
-Copyright 2019 Michael Chen under [MIT license](http://opensource.org/licenses/MIT).
+Copyright 2019, Michael Chen. This repo itself is under [MIT license](http://opensource.org/licenses/MIT). Nevertheless, you may adopt it in your own project with any license you prefer.

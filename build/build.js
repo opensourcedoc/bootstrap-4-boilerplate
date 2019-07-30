@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 const gulp = require('gulp');
 const message = require('./lib/message');
 
@@ -32,7 +35,7 @@ gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'java
 gulp.task('font', gulp.series('font:clean', 'font:build'));
 gulp.task('image', gulp.series('image:clean', 'image:build'));
 
-function reload (done) {
+function reload(done) {
   browserSync.reload();
   done();
 }
@@ -40,7 +43,25 @@ function reload (done) {
 gulp.task('watch', function () {
   browserSync.init({
     open: false,
-    server: { baseDir: '../public' }
+    server: { baseDir: '../public' },
+    callbacks: {
+      ready: function (err, bs) {
+        bs.addMiddleware("*", function (req, res, next) {
+            if (req.domain === null) {
+              res.statusCode = 404;
+              res.setHeader('Content-type', 'text/html');
+              let pagePath = path.join(__dirname, '..', 'public', '404.html'); 
+              let html = fs.readFileSync(pagePath);
+              res.write(html);    
+              res.end();
+
+              return res;
+            }
+
+            return next;
+        });
+      }
+    }
   });
 
   gulp.watch('../src/**/*.html', gulp.series('html', reload))

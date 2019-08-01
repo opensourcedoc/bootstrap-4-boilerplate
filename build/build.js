@@ -28,12 +28,19 @@ gulp.task('font:clean', require('./tasks/font/clean'));
 gulp.task('image:build', require('./tasks/image/build'));
 gulp.task('image:clean', require('./tasks/image/clean'));
 
+/* Static Asset Tasks */
+gulp.task('static:copy', function () {
+  return gulp.src('../static/**/*')
+    .pipe(gulp.dest('../public/'));
+});
+
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 gulp.task('sass', gulp.series('sass:clean', 'sass:lint', 'sass:build'));
 gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'javascript:build'));
 gulp.task('font', gulp.series('font:clean', 'font:build'));
 gulp.task('image', gulp.series('image:clean', 'image:build'));
+gulp.task('static', gulp.series('static:copy'));
 
 function reload(done) {
   browserSync.reload();
@@ -81,6 +88,9 @@ gulp.task('watch', function () {
 
   gulp.watch('../assets/img/**/*.{jpg,jpeg,png,gif,svg}', gulp.series('image', reload))
     .on('error', message.error('WATCH: Image'));
+
+  gulp.watch('../static/**/*', gulp.series('static', reload))
+    .on('error', message.error('WATCH: Static Assets'));
 });
 
-gulp.task('default', gulp.parallel('html', 'sass', 'javascript', 'font', 'image'));
+gulp.task('default', gulp.parallel('html', 'sass', 'javascript', 'font', 'image', 'static'));

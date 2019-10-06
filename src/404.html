@@ -1,0 +1,16 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %}
+Page Not Found
+{% endblock %}
+
+{% block content %}
+<h1>Page Not Found</h1>
+
+<p>The page your requested is not found on the website.</p>
+
+<p>You should NOT use the default HTTP 404 error page provided by your web server. Such page usually reveals too many technical details. Instead, you should set a redirecting rule and a custom error page for HTTP 404 (or other erroneous HTTP status code) on production environment.</p>
+
+<p>Return to <a href="/" target="_self">Home</a></p>
+
+{% endblock %}

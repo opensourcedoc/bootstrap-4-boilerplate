@@ -72,6 +72,12 @@ The output will be in *public* directory. During production phase, all assets wi
 
 Upload the content in *public* directory to a remote web server to publish this project.
 
+## Note for Web Developers
+
+You should **NOT** use the builtin error pages provided by your web server. Such pages usually reveal too many technical details. Instead, you should set redirecting rules and custom error pages for erroreous HTTP status codes.
+
+In this boilerplate project, we provide a custom HTTP 404 error page. Nevertheless, the page works only on our development environment. You still need to set your own redirecting rules and custom error pages on your production environment.
+
 ## See Also
 
 This boilerplate project is largely inspired by [tonik/html-frontend-boilerplate](https://github.com/tonik/html-frontend-boilerplate).
@@ -80,4 +86,4 @@ Why re-inventing the wheel? That project didn't migrate to Gulp 4 yet as this re
 
 ## Copyright
 
-Copyright 2019 Michael Chen under [MIT license](http://opensource.org/licenses/MIT).
+Copyright 2019, Michael Chen. This repo itself is under [MIT license](http://opensource.org/licenses/MIT). Nevertheless, you may adopt it in your own project with any license you prefer.

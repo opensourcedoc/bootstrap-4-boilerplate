@@ -6,14 +6,15 @@ Yet another boilerplate project for front end applications.
 
 Main tools used during development:
 
-* [Gulp](https://gulpjs.com/)
-* [Nunjucks](https://mozilla.github.io/nunjucks/)
-* [Sass](https://sass-lang.com/)
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [stylelint](https://stylelint.io/)
-* [Babel](https://babeljs.io/)
-* [Flow](https://flow.org/en/)
-* [ESLint](https://eslint.org/)
+* [Gulp](https://gulpjs.com/): build automation for the project
+* [Nunjucks](https://mozilla.github.io/nunjucks/): HTML template language
+* [Sass](https://sass-lang.com/): write CSS in Sass
+* [Autoprefixer](https://github.com/postcss/autoprefixer): add prefix for your CSS sheet
+* [stylelint](https://stylelint.io/): check the quality of your CSS sheet
+* [Babel](https://babeljs.io/): JavaScript transpiler
+* [Flow](https://flow.org/en/): add type checking for JavaScript
+* [ESLint](https://eslint.org/): check the quality of your JavaScript code
+* [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat): check browser compatibility
 
 Libraries used in the output:
 

@@ -73,6 +73,35 @@ The output will be in *public* directory. During production phase, all assets wi
 
 Upload the content in *public* directory to a remote web server to publish this project.
 
+## Use Markdown in the Project
+
+Nunjucks doesn't support Markdown by default. Its support in Nunjucks is implemented in a [plugin](https://github.com/zephraph/nunjucks-markdown).
+
+To write a Markdown document, wrap such code in a specific region:
+
+```
+{% markdown %}
+Hello World
+===========
+# Do stuff
+{% endmarkdown %}
+```
+
+You may include a Markdown file as a template:
+
+```
+{% markdown "post.md" %}
+```
+
+Alternatively, include some Markdown code as a partial:
+
+```
+{% markdown %}
+{% include 'post1.md' %}
+{% include 'post2.md' %}
+{% endmarkdown %}
+```
+
 ## Note for Web Developers
 
 You should **NOT** use the builtin error pages provided by your web server. Such pages usually reveal too many technical details. Instead, you should set redirecting rules and custom error pages for erroreous HTTP status codes.

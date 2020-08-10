@@ -10,6 +10,9 @@ const browserSync = require('browser-sync').create();
 gulp.task('html:build', require('./tasks/html/build'));
 gulp.task('html:clean', require('./tasks/html/clean'));
 
+/* Markdown Tasks */
+gulp.task("markdown:build", require("./tasks/markdown/build"));
+
 /* SASS Tasks */
 gulp.task('sass:build', require('./tasks/sass/build'));
 gulp.task('sass:clean', require('./tasks/sass/clean'));
@@ -36,6 +39,7 @@ gulp.task('static:copy', function () {
 
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
+gulp.task("markdown", gulp.series("markdown:build"));
 gulp.task('sass', gulp.series('sass:clean', 'sass:lint', 'sass:build'));
 gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'javascript:build'));
 gulp.task('font', gulp.series('font:clean', 'font:build'));
@@ -77,6 +81,9 @@ gulp.task('watch', function () {
   gulp.watch('../src/**/*.html', gulp.series('html', reload))
     .on('error', message.error('WATCH: Views'));
 
+  gulp.watch("../src/**/*.md", gulp.series("markdown", reload))
+    .on("error", message.error("WATCH: Markdown"));
+
   gulp.watch('../assets/sass/**/*.scss', gulp.series('sass', reload))
     .on('error', message.error('WATCH: Sass'));
 
@@ -93,4 +100,4 @@ gulp.task('watch', function () {
     .on('error', message.error('WATCH: Static Assets'));
 });
 
-gulp.task('default', gulp.parallel('html', 'sass', 'javascript', 'font', 'image', 'static'));
+gulp.task('default', gulp.parallel('html', "markdown", 'sass', 'javascript', 'font', 'image', 'static'));

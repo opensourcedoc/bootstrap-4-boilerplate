@@ -7,7 +7,7 @@ Yet another boilerplate project for front end applications.
 Main tools used during development:
 
 * [Gulp](https://gulpjs.com/): build automation for the project
-* [Nunjucks](https://mozilla.github.io/nunjucks/): HTML template language
+* [Nunjucks](https://mozilla.github.io/nunjucks/) (with Markdown support): HTML template language
 * [Sass](https://sass-lang.com/): write CSS in Sass
 * [Autoprefixer](https://github.com/postcss/autoprefixer): add prefix for your CSS sheet
 * [stylelint](https://stylelint.io/): check the quality of your CSS sheet

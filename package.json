@@ -1,6 +1,6 @@
 {
   "name": "html-frontend-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Yet Another HTML Front End Boilerplate Project",
   "main": "index.js",
   "scripts": {
@@ -35,14 +35,17 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^6.2.0",
     "gulp-notify": "^3.2.0",
+    "gulp-nunjucks": "^5.0.1",
     "gulp-nunjucks-render": "^2.2.3",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.1.0",
     "gulp-stylelint": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "isdev": "^1.0.1",
+    "marked": "^1.1.1",
+    "nunjucks-markdown": "^2.0.1",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
-  },
-  "dependencies": {}
+  }
 }

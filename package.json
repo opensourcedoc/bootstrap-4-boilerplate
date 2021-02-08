@@ -43,7 +43,7 @@
     "gulp-stylelint": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "isdev": "^1.0.1",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "nunjucks-markdown": "^2.0.1",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"

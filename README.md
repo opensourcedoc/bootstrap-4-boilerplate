@@ -1,6 +1,6 @@
-# HTML Front End Boilerplate
+# Bootstrap 4 Boilerplate
 
-Yet another boilerplate project for front end applications.
+Front end boilerplate project for Bootstrap 4.
 
 ## Technology Stacks
 
@@ -25,19 +25,29 @@ Libraries used in the output:
 
 ### Start a New Project
 
-Clone this repo and install all tools:
+Clone this repo:
 
 ```
-$ git clone https://github.com/cwchentw/html-frontend-boilerplate.git
-$ mv html-frontend-boilerplate myapp
+$ git clone https://github.com/cwchentw/bootstrap-4-boilerplate.git myapp
+```
+
+Change your working directory to the root of the cloned repo:
+
+```
 $ cd myapp
+```
+
+Install required packages:
+
+```
 $ npm install
 ```
 
-After editing *myapp*, update the remote URL to save it to a new remote repo:
+After editing *myapp*, update the remote URL to save the local repo to a new remote one:
 
 ```
-$ git remote set-url origin path/to/remote/repo
+$ git remote set-url origin https://example.com/user/myapp.git
+$ git push -u origin master
 ```
 
 ### Build a Project
@@ -103,7 +113,7 @@ Alternatively, include some Markdown code as a partial:
 
 ## Note for Web Developers
 
-You should **NOT** use the builtin error pages provided by your web server. Such pages usually reveal too many technical details. Instead, you should set redirecting rules and custom error pages for erroreous HTTP status codes.
+You should **NOT** use the builtin error pages provided by your web server. Such pages usually reveal too much system information. Instead, you should set redirecting rules and custom error pages for erroreous HTTP status codes.
 
 In this boilerplate project, we provide a custom HTTP 404 error page. Nevertheless, the page works only on our development environment. You still need to set your own redirecting rules and custom error pages on your production environment.
 
@@ -115,4 +125,4 @@ Why re-inventing the wheel? That project didn't migrate to Gulp 4 yet as this re
 
 ## Copyright
 
-Copyright 2019, Michael Chen. This repo itself is under [MIT license](http://opensource.org/licenses/MIT). Nevertheless, you may adopt it in your own project with any license you prefer.
+Copyright (c) 2019-2021, Michael Chen. Licensed under [MIT license](http://opensource.org/licenses/MIT).

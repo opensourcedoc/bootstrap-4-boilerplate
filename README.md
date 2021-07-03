@@ -2,6 +2,10 @@
 
 Front end boilerplate project for Bootstrap 4.
 
+## Note
+
+This boilerplate project intends for tiny static sites with few pages. If you want to build a content website, see [mdcms](https://mdcms.org) instead.
+
 ## Technology Stacks
 
 Main tools used during development:
@@ -125,4 +129,4 @@ Why re-inventing the wheel? That project didn't migrate to Gulp 4 yet as this re
 
 ## Copyright
 
-Copyright (c) 2019-2021, Michael Chen. Licensed under [MIT license](http://opensource.org/licenses/MIT).
+Copyright (c) 2019-2021, Michelle Chen. Licensed under [MIT license](http://opensource.org/licenses/MIT)

@@ -4,7 +4,7 @@ Front end boilerplate project for Bootstrap 4.
 
 ## Note
 
-This boilerplate project intends for tiny static sites with few pages. If you want to build a content website, see [mdcms](https://mdcms.org) instead.
+This boilerplate project intends for tiny static sites with few pages. If you want to build a content website, see [Lightweight CMS](https://lightweightcms.org) instead.
 
 ## Technology Stacks
 

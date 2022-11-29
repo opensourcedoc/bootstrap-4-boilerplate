@@ -45,7 +45,7 @@
     "isdev": "^1.0.1",
     "marked": "^4.0.10",
     "nunjucks-markdown": "^2.0.1",
-    "stylelint": "^10.1.0",
+    "stylelint": "^14.15.0",
     "stylelint-config-recommended": "^2.2.0"
   }
 }
